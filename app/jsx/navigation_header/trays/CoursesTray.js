@@ -29,7 +29,7 @@ import Text from '@instructure/ui-elements/lib/components/Text'
 export default function CoursesTray({courses, hasLoaded}) {
   return (
     <View as="div" padding="medium">
-      <Heading level="h3" as="h2">{I18n.t('Courses')}</Heading>
+      <Heading level="h3" as="h2">{I18n.t('PyWeekend')}</Heading>
       <hr role="presentation"/>
       <List variant="unstyled" margin="small 0" itemSpacing="small">
         {hasLoaded ? (
@@ -43,7 +43,7 @@ export default function CoursesTray({courses, hasLoaded}) {
           ).concat([
             <ListItem key="hr"><hr role="presentation"/></ListItem>,
             <ListItem key="all">
-              <Link href="/courses">{I18n.t('All Courses')}</Link>
+              <Link href="/courses">{I18n.t('All PyWeekend')}</Link>
             </ListItem>
           ])
         ) : (
@@ -55,7 +55,7 @@ export default function CoursesTray({courses, hasLoaded}) {
       <br />
       <Text>
         {I18n.t(
-          'Welcome to your courses! To customize the list of courses,  click on the "All Courses" link and star the courses to display.'
+          'Welcome to your PyWeekend! To customize the list of PyWeekend,  click on the "All PyWeekend" link and star the PyWeekend to display.'
         )}
       </Text>
     </View>

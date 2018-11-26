@@ -16,7 +16,7 @@
 # with this program. If not, see <http://www.gnu.org/licenses/>.
 %>
 
-<% content_for :page_title, t('titles.courses', 'Courses') %>
+<% content_for :page_title, t('titles.courses', 'PyWeekend') %>
 
 <% content_for :auto_discovery do %>
   <% if @current_user %>
@@ -29,7 +29,7 @@
 <% @favorite_course_ids = @current_user.courses_with_primary_enrollment(:favorite_courses).map(&:id) %>
 <% @show_star_column = true %>
   <div class="header-bar">
-    <h2><%= t('headings.my_courses', %{All Courses}) %></h2>
+    <h2><%= t('headings.my_courses', %{All PyWeekend}) %></h2>
   </div>
 
   <div class="ic-Action-header content--hasMarginTop">
@@ -44,20 +44,20 @@
                   class="Button element_toggler"
                   aria-controls="new_course_form"
                   aria-label="<%= t('Add a Course') %>">
-                  <i class="icon-plus"></i> <%= t('start_new_course', 'Course') %></button>
+                  <i class="icon-plus"></i> <%= t('start_new_course', 'PyWeekend') %></button>
           <%= render :partial => 'shared/new_course_form' %>
       <% end %>
     </div>
   </div>
 
 <% if @current_enrollments.empty? %>
-  <%= t("You are not enrolled in any courses.") %>
+  <%= t("You are not enrolled in any pyweekend.") %>
 <% else %>
   <table id="my_courses_table" class="ic-Table ic-Table--bordered course-list-table">
     <thead>
       <tr>
         <th scope="col" class="course-list-star-column"><span class="screenreader-only"><%= t ('Favorites') %></span></th>
-        <th scope="col" class="course-list-course-title-column course-list-no-left-border"><%= t ('Course') %></th>
+        <th scope="col" class="course-list-course-title-column course-list-no-left-border"><%= t ('PyWeekend') %></th>
         <th scope="col" class="course-list-nickname-column course-list-no-left-border"><%= t ('Nickname') %></th>
         <th scope="col" class="course-list-term-column course-list-no-left-border"><%= t ('Term') %></th>
         <th scope="col" class="course-list-enrolled-as-column course-list-no-left-border"><%= t ('Enrolled as') %></th>

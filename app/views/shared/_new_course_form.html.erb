@@ -19,14 +19,14 @@
 <%= form_for Course.new, :html => { :id => 'new_course_form',
                                     :class => 'bootstrap-form form-horizontal',
                                     'data-turn-into-dialog' => '{"width":500,"resizable":false}',
-                                    :title => t('start_a_new_course', 'Start a New Course'),
+                                    :title => t('start_a_new_course', 'Start a New PyWeekend'),
                                     :style => 'display:none;' } do |f| %>
 
   <div class="control-group">
-    <%= f.label :name, :en => "Course Name", :class => "control-label" %>
+    <%= f.label :name, :en => "PyWeekend Name", :class => "control-label" %>
     <div class="controls">
       <%= f.text_field :name,
-                       :placeholder => t('new_course_name_placeholder', 'Course Name'),
+                       :placeholder => t('new_course_name_placeholder', 'PyWeekend Name'),
                        :class => 'input-xlarge',
                        :maxlength => '255' %>
     </div>
@@ -59,7 +59,7 @@
     <div class="controls">
       <label class="checkbox" for="course_is_public">
         <%= f.check_box :is_public %>
-        <%= t :course_is_public_explanation, "Make course publicly visible *(student data will remain private)*", wrapper: '<div>\1</div>' %>
+        <%= t :course_is_public_explanation, "Make PyWeekend publicly visible *(student data will remain private)*", wrapper: '<div>\1</div>' %>
       </label>
     </div>
   </div>
@@ -70,7 +70,7 @@
             data-text-while-loading="<%= t 'cancel', "Cancel" %>"
             class="btn dialog_closer"><%= t 'cancel', "Cancel" %></button>
     <button class="btn btn-primary"
-            data-text-while-loading="<%= t 'creating_course', 'Creating course...' %>"
-            type="submit"><%= t 'create_course', 'Create course' %></button>
+            data-text-while-loading="<%= t 'creating_course', 'Creating PyWeekend...' %>"
+            type="submit"><%= t 'create_course', 'Create PyWeekend' %></button>
   </div>
 <% end %>
