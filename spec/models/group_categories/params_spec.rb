@@ -40,7 +40,7 @@ module GroupCategories
     end
 
     it 'delegates through properties that need no transformation' do
-      params = build_params(name: "SomeName", group_limit: 42)
+      params = build_params(name: "SomeName", description: "Descripcion", group_limit: 42)
       expect(params.name).to eq "SomeName"
       expect(params.group_limit).to eq 42
     end

@@ -21,7 +21,7 @@ require_dependency "group_categories/params_policy"
 
 module GroupCategories
 
-  MockGroupCategory = Struct.new(:name, :self_signup,
+  MockGroupCategory = Struct.new(:name, :description, :self_signup,
     :auto_leader, :group_limit, :create_group_count, :assign_unassigned_members, :group_by_section)
 
   describe ParamsPolicy do
